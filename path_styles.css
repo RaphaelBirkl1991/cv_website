@@ -1,10 +1,13 @@
 :root {
   --prime: 255, 110, 72;
   --ciBlue: 0, 255, 241;
-  --ciRed: 255, 0, 170;
+  --grey: 255, 0, 170;
   --ciWhite: 255, 255, 255;
   --ciGreen: 70, 252, 180;
-  --ciSecond: 0, 16, 22;
+  --ciSecond: 0, 16,22;
+  --prussiaBlue: 0, 49, 83; 
+ 
+
 }
 
 @font-face {
@@ -39,6 +42,10 @@ html {
   overflow-x: hidden;
 }
 
+h1 {
+  font-size: 7vh;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -50,6 +57,18 @@ main {
   gap: 12rem;
   padding: 5rem;
 }
+#my_table {
+  border-color: antiquewhite;
+  border-width: 5PX;
+}
+.drive_link {
+  color: var(--grey)
+}
+.presentation {
+  border: 4px solid rgb(var(--prussiaBlue));
+  border-radius: 2.2rem;
+}
+
 @media (max-width: 900px) {
   main {
     gap: 2rem;
@@ -108,10 +127,12 @@ main .container div img {
 }
 
 .herosection {
-  margin-left: 5vw; 
+  width: 80%; 
+  /* margin-left: 1vw;  */
   margin-right: 5vw; 
-  margin-top: 5vh;
-  margin-bottom: 3vh; 
+  margin-top: 4vh;
+  margin-bottom: 6vh; 
+  color: rgb(var(--ciWhite));
   
 }
 

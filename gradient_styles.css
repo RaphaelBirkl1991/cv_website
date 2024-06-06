@@ -1,0 +1,81 @@
+/* 
+
+* {
+  box-sizing: border-box;
+}
+
+.animated-image{
+  width: 250px;
+  height: 350px;
+  position: relative;
+  z-index: 2;
+  border-radius: 20px;
+}
+ .animated-image {
+  width: 100%;
+  height: 100%;
+  background-color: #0c1016;
+  border-radius: 15px;
+}
+.animated-image::before, .animated-image::after {
+  content: "";
+  width: 260px;
+  height: 360px;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  border-radius: 20px;
+  background-image: linear-gradient(0, #ff00aa, #00FFF1);
+  background-size: 100% 200%;
+  background-position: center center;
+  top: -5px;
+  left: -5px;
+  animation: spin 3000ms infinite alternate;
+}
+.container::after {
+  filter: blur(125px);
+}
+
+@keyframes spin {
+  0% {
+    background-position: top center;
+  }
+  100% {
+    background-position: bottom center;
+  }
+} */
+
+
+.animated-image {
+  border-radius: 20px; /* Gleiche Einstellung wie in .container */
+}
+
+.animated-image::before,
+.animated-image::after {
+  content: "";
+  width: calc(100% + 10px); /* 100% der Breite plus den zusätzlichen Raum für den Rahmen */
+  height: calc(100% + 10px); /* 100% der Höhe plus den zusätzlichen Raum für den Rahmen */
+  display: block;
+  position: absolute;
+  z-index: -1;
+  border-radius: 20px; /* Gleiche Einstellung wie in .container */
+  background-image: linear-gradient(0, #ff00aa, #00FFF1);
+  background-size: 100% 200%;
+  background-position: center center;
+  top: -5px; /* Den Rahmen über die Grenzen des Bildes hinaus erweitern */
+  left: -5px; /* Den Rahmen über die Grenzen des Bildes hinaus erweitern */
+  animation: spin 3000ms infinite alternate;
+}
+
+.animated-image::after {
+  filter: blur(125px);
+}
+
+@keyframes spin {
+  0% {
+    background-position: top center;
+  }
+  100% {
+    background-position: bottom center;
+  }
+}
